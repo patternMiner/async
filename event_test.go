@@ -13,7 +13,7 @@ func (e testEvent) Process() {
 
 var wg sync.WaitGroup
 
-func TestAsync(t *testing.T) {
+func TestEventDispatcher(t *testing.T) {
 	StartDispatcher(4)
 	feedback := make(chan string, 16)
 	responseCount := 0
