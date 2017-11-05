@@ -2,7 +2,11 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "async",
-    srcs = glob(["*.go"]),
+    srcs = [
+        "dispatcher.go",
+        "event.go",
+        "event_handler.go"
+    ],
     deps = [],
     importpath = "github.com/patternMiner/async",
     visibility = ["//visibility:public"],
